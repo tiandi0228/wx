@@ -1,0 +1,45 @@
+<include file="Public/header" />
+<div class="MinWidth">
+    <!--幻灯片广告-->
+    <div class="banner">
+        <ul id="BanCont">
+            <li><a href="#" title="牛仔VT"><img src="http://www.0754shop.com/images/mobi/cn/advertising/HomeSlides1.jpg" width="320" height="161" alt="牛仔VT"></a></li>
+            <li><a href="#" title="闺蜜装"><img src="http://www.0754shop.com/images/mobi/cn/advertising/HomeSlides2.jpg" width="320" height="161" alt="闺蜜装"></a></li>
+            <li><a href="#" title="闺蜜装"><img src="http://www.0754shop.com/images/mobi/cn/advertising/HomeSlides3.jpg" width="320" height="161" alt="闺蜜装"></a></li>
+            <li><a href="#" title="闺蜜装"><img src="http://www.0754shop.com/images/mobi/cn/advertising/HomeSlides4.jpg" width="320" height="161" alt="闺蜜装"></a></li>
+            <li><a href="#" title="闺蜜装"><img src="http://www.0754shop.com/images/mobi/cn/advertising/HomeSlides5.jpg" width="320" height="161" alt="闺蜜装"></a></li>
+        </ul>
+        <ul class="banner_link">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+    <!--幻灯片广告-->
+    <div class="btn_big">
+        <ul>
+            <li><a href="/Mobile/Pro/index.html?bid={$bid}&catid=1">新品上市</a></li>
+            <li><a href="/Mobile/Pro/index.html?bid={$bid}&catid=2">促销专区</a></li>
+            <li><a href="/Mobile/Pro/index.html?bid={$bid}&catid=3">精品推荐</a></li>
+        </ul>
+    </div>
+    <div class="pr_showList_Grid MarginTop10">
+        <ul>
+            <volist name="list" id="val">
+                <li>
+                    <a href="/Mobile/Pro/Show.html?bid={$val.bid}&pid={$val.pid}">
+                        <img src="{$val.img}" width="130" height="130">
+                    </a>
+                    <p class="ellipsis">
+                        <a href="/Mobile/Pro/Show.html?bid={$val.bid}&pid={$val.pid}" title="{$val.proname}">{$val.proname}</a>
+                    </p>
+                    <del>市场价：￥{$val.price}</del>
+                    <p>会员价：￥<span>{$val.pricing}</span></p>
+                </li>
+            </volist>
+        </ul>
+    </div>
+</div>
+<include file="Public/footer" />

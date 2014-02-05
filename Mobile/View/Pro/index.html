@@ -1,0 +1,37 @@
+<include file="Public/header" />
+<div class="TopMin320 TopBg">
+    <div class="top_title">商品列表</div>
+    <div class="top_title_back PicIEPng">
+        <a href="javascript:history.back();">
+            <img src="/public/images/back_ico.png">
+        </a>
+    </div>
+    <div class="top_title_home">
+        <ul>
+            <li class="PicIEPng">
+                <a href="/Mobile/index.html?bid={$bid}">
+                    <img src="/public/images/home_ico.png">
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="MinWidth">
+    <div class="pr_showList_Grid MarginTop10">
+        <ul>
+            <volist name="list" id="val">
+                <li>
+                    <a href="/Mobile/Pro/Show.html?bid={$val.bid}&pid={$val.pid}">
+                        <img src="{$val.img}" width="130" height="130">
+                    </a>
+                    <p class="ellipsis">
+                        <a href="/Mobile/Pro/Show.html?bid={$val.bid}&pid={$val.pid}" title="{$val.proname}">{$val.proname}</a>
+                    </p>
+                    <del>市场价：￥{$val.price}</del>
+                    <p>会员价：￥<span>{$val.pricing}</span></p>
+                </li>
+            </volist>
+        </ul>
+    </div>
+</div>
+<include file="Public/footer" />

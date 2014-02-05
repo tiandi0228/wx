@@ -1,0 +1,19 @@
+@charset "utf-8";
+body{font-size:12px;background:url(/public/images/bg.png) repeat;}
+.Copyright{ text-align:center; color:#B4B4B4; padding:10px}
+.login{width:292px; margin:105px auto 0; font-family:microsoft yahei; color:#9C9C9C}
+.login_top,.login_bottom{width:292px; background:url(/public/images/member_bg.png) no-repeat; _overflow:hidden;}
+.login_top{ height:4px; background-position:0 0}
+.login_bottom{ height:12px; background-position:0 -6px }
+.loginMain{width:290px; border-left:1px solid #E0E0E0; border-right:1px solid #E0E0E0; background-color:#fff; padding:20px 0}
+.loginMain h1{ text-align:center; font-size:24px; font-weight:normal; color:#8B8B8B; margin-bottom:30px}
+.FormList{ padding-left:40px;}
+.FormList li{width:250px; height:34px; padding-bottom:10px; position:relative;}
+.FormList li input.text{width:172px; height:34px; background:url(/public/images/member.gif) no-repeat 0 -73px; outline:none; padding-left:50px; color:#9B9B9B}
+.FormList li em.Icon{width:19px; height:19px; display:inline-block; background:url(/public/images/member.gif) no-repeat; position:absolute; left:8px; top:8px}
+.FormList li em.Account{ background-position:-125px 3px}
+.FormList li em.Paddword{ background-position:-126px -20px }
+.button{background:#428bca; border-color:#357ebd; border-radius:2px; color:#fff; font-size:14px; cursor:pointer;}
+.button{width:216px; height:30px; text-align:center; margin-left:3px;}
+.button:hover, .button:focus, .button:active, .button.active{color:#fff; background-color:#3276b1; border-color:#285e8e;}
+.FormList li div.error{width: 220px; height: 30px; background: #fffea4; position: absolute; left: 0px; top: 32px; color: #ff6600; text-align: center; font: 14px/30px "Microsoft Yahei"; display: none; z-index: 5;}
