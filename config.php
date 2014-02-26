@@ -2,7 +2,7 @@
 return array (
   'db_type' => 'mysql',
   'db_host' => 'localhost',
-  'db_name' => 'fur',
+  'db_name' => 'wx',
   'db_user' => 'root',
   'db_pwd' => '',
   'db_port' => 3306,

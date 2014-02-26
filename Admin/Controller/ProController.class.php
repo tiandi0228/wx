@@ -9,7 +9,7 @@ class ProController extends ControllerBack
         $user['bid']=$_SESSION["uid"];
         $Pro = M("Pro");
         //导入分页类
-        $count = $Pro->count();    //计算总数
+        $count = $Pro->where($user)->count();    //计算总数
         $p = new \Org\Util\Page($count, 20);
         $list = $Pro->where($user)->limit($p->firstRow . ',' . $p->listRows)->order('pid asc')->select();
         $p->setConfig('header','个商品');

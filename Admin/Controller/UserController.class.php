@@ -8,7 +8,7 @@ class UserController extends ControllerBack
     {
         $User = M("Users");
         //导入分页类
-        $count = $User->count();    //计算总数
+        $count = $User->where($user)->count();    //计算总数
         $p = new \Org\Util\Page($count, 20);
         $list = $User->limit($p->firstRow . ',' . $p->listRows)->order('uid asc')->select();
         $p->setConfig('header','位会员');
