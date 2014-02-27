@@ -8,7 +8,12 @@ class MessageController extends ControllerBack
     {
         $user['bid']=$_SESSION["uid"];
         $Message = M("Message");
-        $count = $Message->where($user)->count();    //计算总数
+        if(audit == 1){
+            $user['audit'] = 1;
+            $count = $Message->where($user)->count();    //计算总数
+        }else{
+            $count = $Message->where($user)->count();    //计算总数
+        }
         $p = new \Org\Util\Page($count, 20);
         $list = $Message->where($user)->limit($p->firstRow . ',' . $p->listRows)->order('id asc')->select();
         $p->setConfig('header','条留言');

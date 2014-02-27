@@ -127,6 +127,9 @@
                             <div class="delete">
                                 <input type="submit" class="btn" value="删除" onclick="return confirm('确定要删除吗?')">
                             </div>
+                            <div class="page">
+                                <?php echo ($page); ?>
+                            </div>
                         </td>
                     </tr>
                     </tbody>
