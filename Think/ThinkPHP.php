@@ -20,7 +20,7 @@ define('MEMORY_LIMIT_ON',function_exists('memory_get_usage'));
 if(MEMORY_LIMIT_ON) $GLOBALS['_startUseMems'] = memory_get_usage();
 
 // 版本信息
-const THINK_VERSION     =   '3.2.0';
+const THINK_VERSION     =   '3.2.1';
 
 // URL 模式定义
 const URL_COMMON        =   0;  //普通模式
@@ -29,7 +29,7 @@ const URL_REWRITE       =   2;  //REWRITE模式
 const URL_COMPAT        =   3;  // 兼容模式
 
 // 类文件后缀
-const EXT               =   '.class.php';
+const EXT               =   '.class.php'; 
 
 // 系统常量定义
 defined('THINK_PATH') 	or define('THINK_PATH',     __DIR__.'/');
