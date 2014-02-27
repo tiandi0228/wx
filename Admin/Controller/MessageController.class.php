@@ -7,13 +7,16 @@ class MessageController extends ControllerBack
     public function index()
     {
         $user['bid']=$_SESSION["uid"];
+        $message['bid']=$_SESSION["uid"];
+        $message['audit']=1;
         $Message = M("Message");
-        if(audit == 1){
-            $user['audit'] = 1;
-            $count = $Message->where($user)->count();    //计算总数
+        $val = $Message->where("audit = 1")->select();
+        if($message['audit'] == 1){
+            $count = $Message->where($Message)->count();    //计算总数
         }else{
             $count = $Message->where($user)->count();    //计算总数
         }
+        print_r($val['audit']);die;
         $p = new \Org\Util\Page($count, 20);
         $list = $Message->where($user)->limit($p->firstRow . ',' . $p->listRows)->order('id asc')->select();
         $p->setConfig('header','条留言');
