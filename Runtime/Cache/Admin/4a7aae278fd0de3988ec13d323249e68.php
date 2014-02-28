@@ -95,8 +95,9 @@
             <div class="container">
 <div class="widget widget-table">
     <div class="widget-header">
-        <?php if($count != 0): ?><h3><span class="current">未读留言</span></h3><?php endif; ?>
-        <h3><span>全部留言</span></h3>
+        <?php if($count != 0): ?><h3><span class="current">未读留言</span></h3>
+        <h3><span>全部留言</span></h3><?php endif; ?>
+        <?php if($count != 1): ?><h3>全部留言</h3><?php endif; ?>
     </div>
     <div class="widget-content">
         <!--未读消息-->

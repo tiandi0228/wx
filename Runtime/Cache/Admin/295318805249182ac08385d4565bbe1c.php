@@ -95,7 +95,7 @@
             <div class="container">
 <div class="widget widget-table">
     <div class="widget-header">
-        <h3><span>会员列表</span></h3>
+        <h3>会员列表</h3>
     </div>
     <div class="widget-content">
         <!--会员列表-->

@@ -3,8 +3,11 @@
     <div class="widget-header">
         <if condition="$count neq 0">
         <h3><span class="current">未读留言</span></h3>
-        </if>
         <h3><span>全部留言</span></h3>
+        </if>
+        <if condition="$count neq 1">
+        <h3>全部留言</h3>
+        </if>
     </div>
     <div class="widget-content">
         <!--未读消息-->

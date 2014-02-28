@@ -95,65 +95,29 @@
             <div class="container">
 <div class="widget widget-table">
     <div class="widget-header">
-        <h3>个人信息</h3>
+        <h3>修改密码</h3>
     </div>
     <div class="widget-content">
-        <!--个人信息-->
+        <!--修改密码-->
         <div class="contents">
-            <form id="form" action="/Admin/User/Update" method="post">
-                <input type="hidden" name="uid" value="<?php echo ($uid); ?>">
+            <form id="form" action="/Admin/User/Pwd" method="post">
                 <table class="table table-striped table-bordered table-set">
                     <tbody>
                     <tr>
-                        <th width="8%">用户名</th>
-                        <td width="25%"><?php echo ($username); ?></td>
+                        <th width="8%">旧&nbsp;&nbsp;密&nbsp;&nbsp;码</th>
+                        <td width="25%"><input type="password" name="password" id="password"></td>
                         <td></td>
                     </tr>
                     <tr>
-                        <th>姓名</th>
-                        <td><input type="text" name="realname" id="realname" value="<?php echo ($realname); ?>"></td>
+                        <th>新&nbsp;&nbsp;密&nbsp;&nbsp;码</th>
+                        <td><input type="password" name="news_password" id="news_password"></td>
                         <td></td>
                     </tr>
                     <tr>
-                        <th>邮箱</th>
-                        <td><input type="text" name="email" id="email" value="<?php echo ($email); ?>"></td>
+                        <th>确认密码</th>
+                        <td><input type="password" name="confirm_password" id="confirm_password"></td>
                         <td></td>
                     </tr>
-                    <tr>
-                        <th>注册IP</th>
-                        <td><?php echo ($regip); ?></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>注册时间</th>
-                        <td><?php echo (date('Y-m-d H:i:s',$regtime)); ?></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>登录IP</th>
-                        <td><?php echo ($loginip); ?></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>登录时间</th>
-                        <td><?php echo (date('Y-m-d H:i:s',$logintime)); ?></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>登录次数</th>
-                        <td><?php echo ($logincount); ?></td>
-                        <td></td>
-                    </tr>
-                    <?php if($_SESSION['groupid'] == 1): ?><tr>
-                        <th>用户组</th>
-                        <td>
-                            <select name="groupid">
-                                <option value="0" <?php if($groupid == 0): ?>selected<?php endif; ?>>会员</option>
-                                <option value="1" <?php if($groupid == 1): ?>selected<?php endif; ?>>管理员</option>
-                            </select>
-                        </td>
-                        <td></td>
-                    </tr><?php endif; ?>
                     <tr>
                         <th></th>
                         <td colspan="2">
@@ -164,7 +128,7 @@
                 </table>
             </form>
         </div>
-        <!--个人信息-->
+        <!--修改密码-->
     </div>
 </div>
                 </div>

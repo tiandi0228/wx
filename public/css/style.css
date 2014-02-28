@@ -1,0 +1,88 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'QTypeCompBook';
+    src: url('/public/fonts/qtypecomp-book-webfont.eot');
+    src: url('/public/fonts/qtypecomp-book-webfont.eot?iefix') format('eot'),
+         url('/public/fonts/qtypecomp-book-webfont.ttf') format('truetype'),
+         url('/public/fonts/qtypecomp-book-webfont.svg#webfontgiHXErbZ') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'ChollaUnicase';
+    src: url('/public/fonts/ChollaUnicase.otf');
+    font-weight: 700;
+    font-style: normal;
+}
+.w1000 {
+    width:1000px;
+    margin:0 auto
+}
+.case {
+    padding-top:40px
+}
+.case h1 {
+    font-size:18px;
+    line-height:24px;
+    font-family:"QTypeCompBook";
+}
+.case h2 {
+    font-size:16px;
+    line-height:24px;
+    font-weight:100
+}
+.case .block dl {
+    padding-top:30px;
+    clear:both;
+    padding-bottom:50px;
+    overflow:auto;
+    height:auto;
+    zoom:1
+}
+.case .block dl dd {
+    float:left;
+    width:229px;
+    margin-right:28px;
+    line-height:24px;
+    font-size:12px;
+    height:295px;
+    display:inline
+}
+.case .block dl dd h3 {
+    background:#1b1c1c;
+    font-size:14px;
+    color:#FFF;
+    text-align:center;
+    line-height:30px;
+    font-weight:100
+}
+.case .block dl dd .text {
+    padding-top:62px;
+    font-family:Arial,Helvetica,sans-serif;
+    background: url(/public/images/app.jpg) no-repeat;
+    background-position: 0 0;
+}
+.case .block dl dd.i2 .text {
+    background-position:-229px 0
+}
+.case .block dl dd.i3 .text {
+    background-position:-458px 0
+}
+.case .block dl dd.i4 .text {
+    background-position:-687px 0
+}
+.case .block dl dd.i5 .text {
+    background-position:-916px 0
+}
+.case .block dl dd.i6 .text {
+    background-position:-1145px 0
+}
+.case .block dl dd.i7 .text {
+    background-position:-1374px 0
+}
+.case .block dl dd.i8 .text {
+    background-position:-1603px 0
+}
+.case .block dl dd.i4,.case .block dl dd.i8 {
+    margin-right:0
+}

@@ -95,76 +95,71 @@
             <div class="container">
 <div class="widget widget-table">
     <div class="widget-header">
-        <h3>个人信息</h3>
+        <h3>添加商品</h3>
     </div>
     <div class="widget-content">
-        <!--个人信息-->
+        <!--编辑商品-->
         <div class="contents">
-            <form id="form" action="/Admin/User/Update" method="post">
-                <input type="hidden" name="uid" value="<?php echo ($uid); ?>">
+            <form action="/Admin/Pro/update" method="post">
+                <input type="hidden" name="pid" value="<?php echo ($pid); ?>">
                 <table class="table table-striped table-bordered table-set">
                     <tbody>
-                    <tr>
-                        <th width="8%">用户名</th>
-                        <td width="25%"><?php echo ($username); ?></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>姓名</th>
-                        <td><input type="text" name="realname" id="realname" value="<?php echo ($realname); ?>"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>邮箱</th>
-                        <td><input type="text" name="email" id="email" value="<?php echo ($email); ?>"></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>注册IP</th>
-                        <td><?php echo ($regip); ?></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>注册时间</th>
-                        <td><?php echo (date('Y-m-d H:i:s',$regtime)); ?></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>登录IP</th>
-                        <td><?php echo ($loginip); ?></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>登录时间</th>
-                        <td><?php echo (date('Y-m-d H:i:s',$logintime)); ?></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>登录次数</th>
-                        <td><?php echo ($logincount); ?></td>
-                        <td></td>
-                    </tr>
-                    <?php if($_SESSION['groupid'] == 1): ?><tr>
-                        <th>用户组</th>
-                        <td>
-                            <select name="groupid">
-                                <option value="0" <?php if($groupid == 0): ?>selected<?php endif; ?>>会员</option>
-                                <option value="1" <?php if($groupid == 1): ?>selected<?php endif; ?>>管理员</option>
-                            </select>
-                        </td>
-                        <td></td>
-                    </tr><?php endif; ?>
-                    <tr>
-                        <th></th>
-                        <td colspan="2">
-                            <button class="btn">修 改</button>
-                        </td>
-                    </tr>
+                        <tr>
+                            <th width="8%">商品名字</th>
+                            <td><input type="text" name="proname" id="proname" value="<?php echo ($proname); ?>"></td>
+                        </tr>
+                        <tr>
+                            <th>市场价</th>
+                            <td><input type="text" name="price" id="price" value="<?php echo ($price); ?>"></td>
+                        </tr>
+                        <tr>
+                            <th>会员价</th>
+                            <td><input type="text" name="pricing" id="pricing" value="<?php echo ($pricing); ?>"></td>
+                        </tr>
+                        <tr>
+                            <th>商品图片</th>
+                            <td>
+                                <div class="controls">
+                                    <a style="float:right" id="upload"></a>
+                                    <div id="controls">
+                                        <ul class="imagelist" id="image_result">
+                                            <?php if($file != ''): if(is_array($file)): foreach($file as $key=>$vscms): if (empty($vscms)) continue;?>
+                                                    <li class="imageitem">
+                                                        <input type="hidden" name="file[]" value="<?php echo ($vscms); ?>">
+                                                        <img height="160" width="160" src="<?php echo ($vscms); ?>" />
+                                                        <span class="txt">
+                                                            <a title="删除" class="del" href='javascript:;'><img src="/public/uploadify/remove.png" /></a>
+                                                        </span>
+                                                    </li><?php endforeach; endif; endif; ?>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>商品分类</th>
+                            <td>
+                                <select name="catid">
+                                    <option value="1" <?php if($catid == 1): ?>selected<?php endif; ?>>新品上市</option>
+                                    <option value="2" <?php if($catid == 2): ?>selected<?php endif; ?>>促销专区</option>
+                                    <option value="3" <?php if($catid == 3): ?>selected<?php endif; ?>>精品推荐</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>商品介绍</th>
+                            <td><textarea name="contents" style="height:100px;"><?php echo ($contents); ?></textarea></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <button class="btn">编辑</button>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </form>
         </div>
-        <!--个人信息-->
+        <!--编辑商品-->
     </div>
 </div>
                 </div>
