@@ -151,7 +151,7 @@
                         <th width="50%">留言内容</th>
                         <th>操作</th>
                     </tr>
-                    <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i; if($val['audit'] == 0): ?><tr>
+                    <?php if(is_array($list1)): $i = 0; $__LIST__ = $list1;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i; if($val['audit'] == 0): ?><tr>
                                 <td><input name="id[]" id="id[]" type="checkbox" value="<?php echo ($val["id"]); ?>"></td>
                                 <td><?php echo ($val["id"]); ?></td>
                                 <td><?php echo ($val["username"]); ?></td>
@@ -166,7 +166,7 @@
                                 <input type="submit" class="btn" value="删除" onclick="return confirm('确定要删除吗?')">
                             </div>
                             <div class="page">
-                                <?php echo ($page); ?>
+                                <?php echo ($pager); ?>
                             </div>
                         </td>
                     </tr>

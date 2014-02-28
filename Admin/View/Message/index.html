@@ -65,7 +65,7 @@
                         <th width="50%">留言内容</th>
                         <th>操作</th>
                     </tr>
-                    <volist name="list" id="val">
+                    <volist name="list1" id="val">
                         <if condition="$val['audit'] eq 0">
                             <tr>
                                 <td><input name="id[]" id="id[]" type="checkbox" value="{$val.id}"></td>
@@ -84,7 +84,7 @@
                                 <input type="submit" class="btn" value="删除" onclick="return confirm('确定要删除吗?')">
                             </div>
                             <div class="page">
-                                {$page}
+                                {$pager}
                             </div>
                         </td>
                     </tr>

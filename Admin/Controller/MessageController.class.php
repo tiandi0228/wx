@@ -7,23 +7,25 @@ class MessageController extends ControllerBack
     public function index()
     {
         $user['bid']=$_SESSION["uid"];
+        $user['audit']=0;
         $message['bid']=$_SESSION["uid"];
         $message['audit']=1;
         $Message = M("Message");
-        $val = $Message->where("audit = 1")->select();
-        if($message['audit'] == 1){
-            $count = $Message->where($Message)->count();    //计算总数
-        }else{
-            $count = $Message->where($user)->count();    //计算总数
-        }
-        print_r($val['audit']);die;
+        $count = $Message->where($message)->count();    //计算未读总数
+        $count1 = $Message->where($user)->count();    //计算全部总数
         $p = new \Org\Util\Page($count, 20);
-        $list = $Message->where($user)->limit($p->firstRow . ',' . $p->listRows)->order('id asc')->select();
+        $p1 = new \Org\Util\Page($count1, 20);
+        $list = $Message->where($message)->limit($p->firstRow . ',' . $p->listRows)->order('id asc')->select();
+        $list1 = $Message->where($user)->limit($p1->firstRow . ',' . $p1->listRows)->order('id asc')->select();
         $p->setConfig('header','条留言');
+        $p1->setConfig('header','条留言');
         $page = $p->show();
+        $pager = $p1->show();
         $this->assign(array(
             'list' => $list,
-            'page' => $page
+            'list1' => $list1,
+            'page' => $page,
+            'pager' =>$pager
         ));
         $this->display();
     }
