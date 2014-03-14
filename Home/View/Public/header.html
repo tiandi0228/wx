@@ -1,19 +1,51 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html class="no-js">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title></title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>{$sitename}</title>
+<meta name="keywords" content="{$keywords}" />
+<meta name="description" content="{$description}" />
 <link rel="Shortcut Icon" title="" href="/favicon.ico" type="image/x-icon" />
 <link href="/public/css/reset.css" rel="stylesheet" type="text/css" />
 <link href="/public/css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="/public/js/jquery-1.10.2.js"></script>
-<!--[if IE 6]>   
-<script type="text/javascript" src="/public/js/DD_belatedPNG.js" ></script>   
-<script type="text/javascript">   
-DD_belatedPNG.fix('*'); 
-</script>  
-<![endif]-->  
+<script src="/public/js/jquery.validate.min.js?v=0.1"></script>
+<script src="/public/js/jquery.validate.message_cn.js?v=0.1"></script>
+<script src="/public/js/common.js?v=0.1"></script>
+<script src="/public/js/jquery.qrcode.js?v=0.1"></script>
 </head>
-<body>
+<body id="b0">
+<!--header-->
+<div class="header">
+    <div class="w1000">
+        <div class="logo"><a href="http://www.w-vi.com/">{$sitename}</a></div>
+        <div class="nav">
+            <if condition="$qq neq ''">
+            <div class="qq">
+                <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin={$qq}&site={$sitename}&menu=yes"></a>
+            </div>
+            </if>
+            <if condition="$sinawb neq ''">
+            <div class="sinawb">
+                <a href="http://weibo.com/{$sinawb}" title="{$sitename}微博" target="_blank"></a>
+            </div>
+            </if>
+            <if condition="$txwb neq ''">
+            <div class="txwb">
+                <a href="http://t.qq.com/{$txwb}" title="{$sitename}微博" target="_blank"></a>
+            </div>
+            </if>
+            <div class="clear"></div>
+            <div class="menu">
+                <ul>
+                    <li id="home" class="cur"><a href="javascript:;">Home 网站首页</a></li>
+                    <li id="case"><a href="javascript:;">Works 移动案例</a></li>
+                    <li id="contact"><a href="javascript:;">Contact 联系我们</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--header-->
+<div class="clear"></div>

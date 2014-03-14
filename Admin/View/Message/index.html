@@ -3,11 +3,8 @@
     <div class="widget-header">
         <if condition="$count neq 0">
         <h3><span class="current">未读留言</span></h3>
+        </if>
         <h3><span>全部留言</span></h3>
-        </if>
-        <if condition="$count neq 1">
-        <h3>全部留言</h3>
-        </if>
     </div>
     <div class="widget-content">
         <!--未读消息-->
@@ -18,18 +15,16 @@
                     <tbody>
                     <tr>
                         <th width="2%"></th>
-                        <th width="5%">编号</th>
                         <th width="10%">姓名</th>
                         <th width="10%">电话</th>
                         <th width="10%">QQ</th>
-                        <th width="50%">留言内容</th>
+                        <th width="55%">留言内容</th>
                         <th>操作</th>
                     </tr>
                     <volist name="list" id="val">
                         <if condition="$val['audit'] eq 1">
                         <tr>
                             <td><input name="id[]" id="id[]" type="checkbox" value="{$val.id}"></td>
-                            <td>{$val.id}</td>
                             <td>{$val.username}</td>
                             <td>{$val.tel}</td>
                             <td>{$val.qq}</td>
@@ -61,18 +56,16 @@
                     <tbody>
                     <tr>
                         <th width="2%"></th>
-                        <th width="5%">编号</th>
                         <th width="10%">姓名</th>
                         <th width="10%">电话</th>
                         <th width="10%">QQ</th>
-                        <th width="50%">留言内容</th>
+                        <th width="55%">留言内容</th>
                         <th>操作</th>
                     </tr>
                     <volist name="list1" id="val">
-                        <if condition="$val['audit'] eq 0">
+                        <if condition="$val neq ''">
                             <tr>
                                 <td><input name="id[]" id="id[]" type="checkbox" value="{$val.id}"></td>
-                                <td>{$val.id}</td>
                                 <td>{$val.username}</td>
                                 <td>{$val.tel}</td>
                                 <td>{$val.qq}</td>

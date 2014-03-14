@@ -8,7 +8,7 @@
     <meta name="keywords" content="iSun微信" />
     <link rel="stylesheet" href="/public/css/reset.css?v=0.1" type="text/css"/>
     <link rel="stylesheet" href="/public/css/login.css?v=0.1" type="text/css"/>
-    <script src="/public/js/jquery-1.7.2.min.js?v=0.1"></script>
+    <script src="/public/js/jquery-1.10.2.js?v=0.1"></script>
     <script src="/public/js/jquery.validate.min.js?v=0.1"></script>
     <script src="/public/js/jquery.validate.message_cn.js?v=0.1"></script>
     <script src="/public/js/login.js?v=0.1"></script>

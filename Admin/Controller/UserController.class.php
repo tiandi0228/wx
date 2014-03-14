@@ -61,7 +61,7 @@ class UserController extends ControllerBack
     public function add()
     {
         $User = M("Users");
-        if(!empty($_POST))
+        if ($User->autoCheckToken($_POST))
         {
             $data['username'] = $_POST['mobile'];
             $data['password'] = md5($_POST['pwd']);

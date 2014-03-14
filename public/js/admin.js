@@ -47,6 +47,9 @@ $(document).ready(function(){
                 number: true,
                 rangelength: [11,11],
                 remote: "/Admin/Check/mobile"
+            },
+            proname: {
+                required: true
             }
         },
         messages: {
@@ -81,6 +84,9 @@ $(document).ready(function(){
                 number: "手机号码只能是数字",
                 rangelength: "手机号码长度为{0}位数",
                 remote: "手机号码重复，请重新输入!"
+            },
+            proname: {
+                required: "请输入商品名称!",
             }
         },
         //设置错误信息存放标签

@@ -96,11 +96,66 @@
             <div class="container">
 <div class="widget widget-table">
     <div class="widget-header">
-        <h3>二维码扫描</h3>
+        <h3>添加商品</h3>
     </div>
     <div class="widget-content">
-        <div id="qrcode" style="padding:10px;margin:auto;"></div>
-        <input type="hidden" id="text" value="http://www.le59.com/Mobile/index.html?bid=<?php echo $_SESSION["uid"]?>">
+        <!--添加商品-->
+        <div class="contents">
+            <form id="form" action="/Admin/Pro/insert" method="post">
+                <table class="table table-striped table-bordered table-set">
+                    <tbody>
+                        <tr>
+                            <th width="8%">商品名字</th>
+                            <td width="60%"><input type="text" name="proname" id="proname"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>市场价</th>
+                            <td><input type="text" name="price" id="price"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>会员价</th>
+                            <td><input type="text" name="pricing" id="pricing"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>商品图片</th>
+                            <td>
+                                <div class="controls">
+                                    <a style="float:right" id="upload"></a>
+                                    <pre id="progress"></pre>
+                                    <ul class="imagelist" id="image_result"></ul>
+                                </div>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>商品分类</th>
+                            <td>
+                                <select name="catid">
+                                    <option value="1">新品上市</option>
+                                    <option value="2">促销专区</option>
+                                    <option value="3">精品推荐</option>
+                                </select>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>商品介绍</th>
+                            <td><textarea name="contents" style="height:100px;"></textarea></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <button class="btn">添加</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+        <!--添加商品-->
     </div>
 </div>
                 </div>

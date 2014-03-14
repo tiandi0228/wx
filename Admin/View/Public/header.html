@@ -85,6 +85,7 @@
                     <li><a href="/Admin/Business">商家信息</a></li>
                     <li><a href="/Admin/User/Profile">个人信息</a></li>
                     <li><a href="/Admin/User/Pwd">修改密码</a></li>
+                    <?php if($_SESSION["groupid"] == "1"){?><li><a href="/Admin/Site">网站设置</a></li><?php }?>
                 </ul>
             </div>
             <div class="user">欢迎您：<span class="userInfo"><?php echo $_SESSION["realname"] ?></span>

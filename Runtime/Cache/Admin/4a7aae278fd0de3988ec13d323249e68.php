@@ -83,6 +83,7 @@
                     <li><a href="/Admin/Business">商家信息</a></li>
                     <li><a href="/Admin/User/Profile">个人信息</a></li>
                     <li><a href="/Admin/User/Pwd">修改密码</a></li>
+                    <?php if($_SESSION["groupid"] == "1"){?><li><a href="/Admin/Site">网站设置</a></li><?php }?>
                 </ul>
             </div>
             <div class="user">欢迎您：<span class="userInfo"><?php echo $_SESSION["realname"] ?></span>
@@ -95,9 +96,8 @@
             <div class="container">
 <div class="widget widget-table">
     <div class="widget-header">
-        <?php if($count != 0): ?><h3><span class="current">未读留言</span></h3>
-        <h3><span>全部留言</span></h3><?php endif; ?>
-        <?php if($count != 1): ?><h3>全部留言</h3><?php endif; ?>
+        <?php if($count != 0): ?><h3><span class="current">未读留言</span></h3><?php endif; ?>
+        <h3><span>全部留言</span></h3>
     </div>
     <div class="widget-content">
         <!--未读消息-->
@@ -107,16 +107,14 @@
                     <tbody>
                     <tr>
                         <th width="2%"></th>
-                        <th width="5%">编号</th>
                         <th width="10%">姓名</th>
                         <th width="10%">电话</th>
                         <th width="10%">QQ</th>
-                        <th width="50%">留言内容</th>
+                        <th width="55%">留言内容</th>
                         <th>操作</th>
                     </tr>
                     <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i; if($val['audit'] == 1): ?><tr>
                             <td><input name="id[]" id="id[]" type="checkbox" value="<?php echo ($val["id"]); ?>"></td>
-                            <td><?php echo ($val["id"]); ?></td>
                             <td><?php echo ($val["username"]); ?></td>
                             <td><?php echo ($val["tel"]); ?></td>
                             <td><?php echo ($val["qq"]); ?></td>
@@ -145,16 +143,14 @@
                     <tbody>
                     <tr>
                         <th width="2%"></th>
-                        <th width="5%">编号</th>
                         <th width="10%">姓名</th>
                         <th width="10%">电话</th>
                         <th width="10%">QQ</th>
-                        <th width="50%">留言内容</th>
+                        <th width="55%">留言内容</th>
                         <th>操作</th>
                     </tr>
-                    <?php if(is_array($list1)): $i = 0; $__LIST__ = $list1;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i; if($val['audit'] == 0): ?><tr>
+                    <?php if(is_array($list1)): $i = 0; $__LIST__ = $list1;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i; if($val != ''): ?><tr>
                                 <td><input name="id[]" id="id[]" type="checkbox" value="<?php echo ($val["id"]); ?>"></td>
-                                <td><?php echo ($val["id"]); ?></td>
                                 <td><?php echo ($val["username"]); ?></td>
                                 <td><?php echo ($val["tel"]); ?></td>
                                 <td><?php echo ($val["qq"]); ?></td>

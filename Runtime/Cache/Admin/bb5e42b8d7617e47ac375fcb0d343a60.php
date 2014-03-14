@@ -96,11 +96,76 @@
             <div class="container">
 <div class="widget widget-table">
     <div class="widget-header">
-        <h3>二维码扫描</h3>
+        <h3>网站设置</h3>
     </div>
     <div class="widget-content">
-        <div id="qrcode" style="padding:10px;margin:auto;"></div>
-        <input type="hidden" id="text" value="http://www.le59.com/Mobile/index.html?bid=<?php echo $_SESSION["uid"]?>">
+        <!--网站设置-->
+        <div class="contents">
+            <form id="form" action="/Admin/Site/Update" method="post">
+                <input type="hidden" name="id" value="<?php echo ($id); ?>">
+                <table class="table table-striped table-bordered table-set">
+                    <tbody>
+                    <tr>
+                        <th width="8%">网站名字</th>
+                        <td width="25%"><input type="text" name="sitename" id="sitename" value="<?php echo ($sitename); ?>"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th width="8%">网址</th>
+                        <td width="25%"><input type="text" name="url" id="url" value="<?php echo ($url); ?>"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>关 键 字</th>
+                        <td><textarea rows="6" name="keywords" id="keywords" cols="50"><?php echo ($keywords); ?></textarea></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>网站描述</th>
+                        <td><textarea rows="6" name="description" id="description" cols="50"><?php echo ($description); ?></textarea></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>邮箱地址</th>
+                        <td><input type="text" name="email" id="email" value="<?php echo ($email); ?>"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>QQ号码</th>
+                        <td><input type="text" name="qq" id="qq" value="<?php echo ($qq); ?>"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>新浪微博</th>
+                        <td><input type="text" name="sinawb" id="sinawb" value="<?php echo ($sinawb); ?>"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>腾讯微博</th>
+                        <td><input type="text" name="txwb" id="txwb" value="<?php echo ($txwb); ?>"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>备案号码</th>
+                        <td><input type="text" name="icp" id="icp" value="<?php echo ($icp); ?>"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>统计代码</th>
+                        <td><textarea rows="6" name="statcode" id="statcode" cols="50"><?php echo ($statcode); ?></textarea></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td colspan="2">
+                            <button class="btn">提 交</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+        <!--网站设置-->
     </div>
 </div>
                 </div>

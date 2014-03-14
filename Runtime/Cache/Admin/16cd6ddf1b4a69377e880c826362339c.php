@@ -96,11 +96,51 @@
             <div class="container">
 <div class="widget widget-table">
     <div class="widget-header">
-        <h3>二维码扫描</h3>
+        <h3><span>详细留言</span></h3>
     </div>
     <div class="widget-content">
-        <div id="qrcode" style="padding:10px;margin:auto;"></div>
-        <input type="hidden" id="text" value="http://www.le59.com/Mobile/index.html?bid=<?php echo $_SESSION["uid"]?>">
+        <!--详细留言-->
+        <div class="contents">
+            <table class="table table-striped table-bordered table-set">
+                <tbody>
+                    <tr>
+                        <th width="8%">编号</th>
+                        <td><?php echo ($id); ?></td>
+                    </tr>
+                    <tr>
+                        <th>姓名</th>
+                        <td><?php echo ($username); ?></td>
+                    </tr>
+                    <tr>
+                        <th>电话</th>
+                        <td><?php echo ($tel); ?></td>
+                    </tr>
+                    <tr>
+                        <th>QQ</th>
+                        <td><?php echo ($qq); ?></td>
+                    </tr>
+                    <?php if($_SESSION['groupid'] == 1 ): ?><tr>
+                            <th>公司名字</th>
+                            <td><?php echo ($companyname); ?></td>
+                        </tr>
+                        <tr>
+                            <th>邮箱</th>
+                            <td><?php echo ($email); ?></td>
+                        </tr><?php endif; ?>
+                    <tr>
+                        <th>留言内容</th>
+                        <td><?php echo ($content); ?></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <a href="/Admin/Message" class="btn">返回</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--详细留言-->
     </div>
 </div>
                 </div>

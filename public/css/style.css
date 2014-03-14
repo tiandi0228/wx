@@ -1,35 +1,146 @@
 @charset "utf-8";
-@font-face {
-    font-family: 'QTypeCompBook';
-    src: url('/public/fonts/qtypecomp-book-webfont.eot');
-    src: url('/public/fonts/qtypecomp-book-webfont.eot?iefix') format('eot'),
-         url('/public/fonts/qtypecomp-book-webfont.ttf') format('truetype'),
-         url('/public/fonts/qtypecomp-book-webfont.svg#webfontgiHXErbZ') format('svg');
-    font-weight: 700;
-    font-style: normal;
+    @font-face {
+    font-family:'QTypeCompBook';
+    src:url('/public/fonts/qtypecomp-book-webfont.eot');
+    src:url('/public/fonts/qtypecomp-book-webfont.eot?iefix') format('eot'),url('/public/fonts/qtypecomp-book-webfont.ttf') format('truetype'),url('/public/fonts/qtypecomp-book-webfont.svg#webfontgiHXErbZ') format('svg');
+    font-weight:700;
+    font-style:normal;
 }
-@font-face{
-    font-family: 'ChollaUnicase';
-    src: url('/public/fonts/ChollaUnicase.otf');
-    font-weight: 700;
-    font-style: normal;
+@font-face {
+    font-family:'ChollaUnicase';
+    src:url('/public/fonts/ChollaUnicase.otf');
+    font-weight:700;
+    font-style:normal;
+}
+body{
+    font-size: 12px;
+}
+.mt20{
+    margin-top: 20px;
+}
+.ml10{
+    margin-left: 10px;
+}
+.ml20{
+    margin-left: 20px;
 }
 .w1000 {
     width:1000px;
-    margin:0 auto
+    margin:0 auto;
+}
+.fl {
+    float:left;
+}
+.fr{
+    float:right;
+}
+.header {
+    width:100%;
+    height:130px;
+    position: fixed;
+    top:0px;
+    left:0px;
+    background:#fff;
+    box-shadow:0 0 4px #ccc;
+    z-index: 100;
+}
+.header .logo {
+    width:150px;
+    height:105px;
+    display:inline;
+    float:left;
+    background:url(images/w-20121123.gif) no-repeat;
+    background-position:0 0;
+}
+.header .nav {
+    float:right;
+}
+.header .nav .sinawb {
+    height:44px;
+    display:block;
+    float:right;
+    margin:20px 10px 20px 0px;
+    background:url(/public/images/tagwb.png) no-repeat;
+}
+.header .nav .sinawb a {
+    width:44px;
+    height:44px;
+    display: block;
+}
+.header .nav .txwb {
+    height:44px;
+    display:block;
+    float:right;
+    margin:20px 10px 20px 0px;
+    background:url(/public/images/tagtc.png) no-repeat;
+}
+.header .nav .txwb a {
+    width:44px;
+    height:44px;
+    display: block;
+}
+.header .nav .qq {
+    height:44px;
+    display:block;
+    float:right;
+    margin:20px 10px 20px 0px;
+    font-size:30px;
+    background:url(/public/images/tagqq.png) no-repeat;
+}
+.header .nav .qq a {
+    width:44px;
+    height:44px;
+    display: block;
+}
+.header .nav .menu {
+    clear:both;
+    font-size:14px;
+    float:right;
+}
+.header .nav .menu li {
+    float:left;
+    display:inline;
+    margin-left:15px;
+}
+.header .nav .menu a {
+    color:#333;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:3px;
+    line-height:28px;
+    padding:0 10px;
+    display:block;
+}
+.header .nav .menu .cur {
+    background:#69ba07;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:3px;
+}
+.header .nav .menu .cur a{
+    color:#fff;
+}
+.header .nav .menu a:hover {
+    background:#4a9f00;
+    text-decoration:none;
+    color:#fff;
+}
+.header .nav .menu a:active {
+    background:#4a9f00;
+    color:#fff;
 }
 .case {
-    padding-top:40px
+    padding-top:160px;
 }
-.case h1 {
+h1 {
     font-size:18px;
     line-height:24px;
     font-family:"QTypeCompBook";
 }
-.case h2 {
+h2 {
     font-size:16px;
     line-height:24px;
-    font-weight:100
+    font-weight:100;
 }
 .case .block dl {
     padding-top:30px;
@@ -37,7 +148,7 @@
     padding-bottom:50px;
     overflow:auto;
     height:auto;
-    zoom:1
+    zoom:1;
 }
 .case .block dl dd {
     float:left;
@@ -46,7 +157,7 @@
     line-height:24px;
     font-size:12px;
     height:295px;
-    display:inline
+    display:inline;
 }
 .case .block dl dd h3 {
     background:#1b1c1c;
@@ -54,35 +165,84 @@
     color:#FFF;
     text-align:center;
     line-height:30px;
-    font-weight:100
+    font-weight:100;
 }
 .case .block dl dd .text {
     padding-top:62px;
     font-family:Arial,Helvetica,sans-serif;
-    background: url(/public/images/app.jpg) no-repeat;
-    background-position: 0 0;
+    background:url(/public/images/app.jpg) no-repeat;
+    background-position:0 0;
 }
 .case .block dl dd.i2 .text {
-    background-position:-229px 0
+    background-position:-229px 0;
 }
 .case .block dl dd.i3 .text {
-    background-position:-458px 0
+    background-position:-458px 0;
 }
 .case .block dl dd.i4 .text {
-    background-position:-687px 0
+    background-position:-687px 0;
 }
 .case .block dl dd.i5 .text {
-    background-position:-916px 0
+    background-position:-916px 0;
 }
 .case .block dl dd.i6 .text {
-    background-position:-1145px 0
+    background-position:-1145px 0;
 }
 .case .block dl dd.i7 .text {
-    background-position:-1374px 0
+    background-position:-1374px 0;
 }
 .case .block dl dd.i8 .text {
-    background-position:-1603px 0
+    background-position:-1603px 0;
 }
 .case .block dl dd.i4,.case .block dl dd.i8 {
-    margin-right:0
+    margin-right:0;
+}
+.contact {
+    background: #f0f2f4;
+    padding:30px 0;
+    overflow: hidden;
+}
+.contact .contact-fr{
+    width:620px;
+    overflow:hidden;
+}
+.contact .contact-fr .formipt{width:300px;position:relative;}
+.contact .contact-fr .formtextarea{width:620px;position:relative;}
+.contact .contact-fr .text{width:280px;height:36px;padding:0 10px;background:#fff;border: 1px solid #dadada;
+-moz-box-shadow: 1px 1px 3px 0px rgba(0,0,0,.1) inset;
+-webkit-box-shadow: 1px 1px 3px 0px rgba(0,0,0,.1) inset;
+box-shadow: 1px 1px 3px 0px rgba(0,0,0,.1) inset;color:#646464;}
+.contact .contact-fr .textarea{width:598px;height:100px;padding:10px;background:#fff;border: 1px solid #dadada;
+-moz-box-shadow: 1px 1px 3px 0px rgba(0,0,0,.1) inset;
+-webkit-box-shadow: 1px 1px 3px 0px rgba(0,0,0,.1) inset;
+box-shadow: 1px 1px 3px 0px rgba(0,0,0,.1) inset;color:#646464;}
+.contact .contact-fr .btn{width:140px;height:40px;background:#69ba07;font-size:16px;color:#fff;cursor:pointer;border-radius:3px;}
+.contact .contact-fr .btn:hover{background:#4a9f00;}
+.contact-fr div.error{width: 302px; height: 36px; background: #fffea4; position: absolute; left: 0px; top: 36px; color: #ff6600; text-align: center; font: 14px/36px "Microsoft Yahei"; display: none; z-index: 5;}
+.contact .contact-fr .formtextarea div.error{width:620px;top:120px;}
+.footer {
+    padding:0;
+    height:42px;
+    background: #040000;
+    display: block;
+    overflow: hidden;
+    clear: both;
+}
+.footer .cpy {
+    color: #848484;
+    position: relative;
+    line-height: 42px;
+    display: block;
+}
+.footer .cpy .int {
+    display: inline;
+}
+.footer .cpy .link {
+    float: left;
+    width:500px;
+    text-align: center;
+}
+.footer .cpy .link a {
+    color: #848484;
+    margin: 0 8px;
 }

@@ -215,8 +215,8 @@ table{max-width:100%;border-collapse:collapse;border-spacing:0;background-color:
 .table-set .rowform input{float:left;}
 .table-set .rowform span{float:left;margin:1px 0 0 5px;}
 .table-set .tips{color:#999;line-height:28px;}
-.table-set div.error{color:#ff0000;line-height:28px;padding-left:20px;background:url(/static/image/admincp/unchecked.gif) no-repeat 0px 7px;}
-.table-set div.success{line-height:28px;padding-left:20px;background:url(/static/image/admincp/checked.gif) no-repeat 0px 7px;}
+.table-set div.error{color:#ff0000;line-height:28px;}
+.table-set div.success{line-height:28px;}
 .table .not-content{text-align:center;padding:20px;}
 input:checked+span{color:#008800 !important;}
 /*组图上传区域*/

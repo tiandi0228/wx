@@ -40,6 +40,8 @@ class MessageController extends ControllerBack
         $list= $Message->where($where)->find();
         $this->assign('id',$list['id']);
         $this->assign('username',$list['username']);
+        $this->assign('companyname',$list['companyname']);
+        $this->assign('email',$list['email']);
         $this->assign('tel',$list['tel']);
         $this->assign('qq',$list['qq']);
         $this->assign('content',$list['content']);

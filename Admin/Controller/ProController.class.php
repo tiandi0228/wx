@@ -27,14 +27,17 @@ class ProController extends ControllerBack
     }
 
     //添加
-    public function add(){
+    public function add()
+    {
         $this->display();
     }
 
     //添加数据
-    public function insert(){
+    public function insert()
+    {
         $Pro = M("Pro");
-        if ($Pro->create()) {
+        if ($Pro->create()) 
+        {
             $data['proname'] = $_POST['proname'];
             $data['price'] = $_POST['price'];
             $data['pricing'] = $_POST['pricing'];
