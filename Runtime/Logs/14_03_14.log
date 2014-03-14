@@ -1,0 +1,51 @@
+[ 2014-03-14T09:12:00+08:00 ] 127.0.0.1 http://www.wx.com/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.035212s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.016331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.016401s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\wx\Think\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+NOTIC: [2] mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) F:\wx\Think\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+ERR: Access denied for user 'root'@'localhost' (using password: NO)
+
+[ 2014-03-14T09:15:37+08:00 ] 127.0.0.1 http://www.wx.com/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000359s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000598s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000660s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\wx\Think\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+NOTIC: [2] mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) F:\wx\Think\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+ERR: Access denied for user 'root'@'localhost' (using password: NO)
+
+[ 2014-03-14T09:16:37+08:00 ] 127.0.0.1 http://www.wx.com/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000428s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000605s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000669s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead F:\wx\Think\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `site` [ RunTime:0.031587s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in F:\wx\Home\Controller\ControllerBack.class.php on line 9 and defined F:\wx\Think\Library\Think\Model.class.php 第 1576 行.
+NOTIC: [8] Undefined variable: where F:\wx\Think\Library\Think\Model.class.php 第 1584 行.
+NOTIC: [8] Undefined variable: where F:\wx\Think\Library\Think\Model.class.php 第 1587 行.
+NOTIC: [8] Undefined variable: where F:\wx\Think\Library\Think\Model.class.php 第 1595 行.
+SQL: SELECT * FROM `site` LIMIT 1   [ RunTime:0.009391s ]
+SQL: SHOW COLUMNS FROM `message` [ RunTime:0.025435s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.064715s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.064779s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.011520s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.003831s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015430s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003843s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003904s ]
+

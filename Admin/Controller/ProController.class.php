@@ -10,7 +10,7 @@ class ProController extends ControllerBack
         $Pro = M("Pro");
         //导入分页类
         $count = $Pro->where($user)->count();    //计算总数
-        $p = new \Org\Util\Page($count, 20);
+        $p = new \Org\Util\Page($count, 1);
         $list = $Pro->where($user)->limit($p->firstRow . ',' . $p->listRows)->order('pid asc')->select();
         $p->setConfig('header','个商品');
         $page = $p->show();

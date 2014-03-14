@@ -95,7 +95,7 @@ class UserController extends ControllerBack
         $uid = $_POST['uid'];
         $where['uid']=array('in',implode(',',$uid));
         $data['audit']=1;
-        $User->where($where)->save($data);
+        $User->where($where)->delete();
         header("Location:/Admin/User");
     }
 }
